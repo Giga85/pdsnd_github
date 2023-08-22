@@ -8,7 +8,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 CITIES = ['chicago', 'new york city', 'washington']
 
 #This is months list
-MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
+
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july']
 
 DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ]
 
@@ -211,7 +212,8 @@ def user_stats(df):
 # Display 10 rows of data 
 def display_data(df):
     """Displays 10 rows of raw data."""
-    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
+
+    view_data = input('\nWould you like to view 10 rows of individual trip data? Enter yes or no\n').lower()
     start_loc = 0
     while view_data =='yes':
         if (start_loc + 10) >= df['Start Time'].count():
@@ -232,7 +234,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         
-        display_data(df)    #see 5 rows of data
+        display_data(df)    #see 10 rows of data
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
