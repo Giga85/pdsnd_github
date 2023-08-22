@@ -1,13 +1,13 @@
 import time
 import pandas as pd
 
-#this is city list
+#This is city list
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 CITIES = ['chicago', 'new york city', 'washington']
 
-#this is months list
+#This is months list
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 
 DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ]
@@ -208,17 +208,17 @@ def user_stats(df):
     print('-'*40)
 
     
-# Display 5 rows of data 
+# Display 10 rows of data 
 def display_data(df):
-    """Displays 5 rows of raw data."""
+    """Displays 10 rows of raw data."""
     view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
     start_loc = 0
     while view_data =='yes':
-        if (start_loc + 5) >= df['Start Time'].count():
+        if (start_loc + 10) >= df['Start Time'].count():
             print(df.iloc[start_loc: start_loc + (df['Start Time'].count() - start_loc)])
             break
-        print(df.iloc[start_loc: start_loc + 5])
-        start_loc += 5
+        print(df.iloc[start_loc: start_loc + 10])
+        start_loc += 10
         view_data = input("Do you wish to continue viewing the next 5 rows? Enter yes or no\n?: ").lower()
     
     
