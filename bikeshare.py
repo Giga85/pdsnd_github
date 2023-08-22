@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 CITIES = ['chicago', 'new york city', 'washington']
 
 #This is months list
-MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july']
 
 DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ]
 
@@ -232,7 +232,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         
-        display_data(df)    #see 5 rows of data
+        display_data(df)    #see 10 rows of data
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
